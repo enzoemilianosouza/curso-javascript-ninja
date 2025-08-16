@@ -29,6 +29,17 @@ function addValorVar(valor) {
   return "o valor da variavel agora é:" + semValor;
 }
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+// correção: ele não pediu param, então deveria ficar:
+function addValor() {
+  var valor = 25;
+  return "o valor da variavel agora é:" + valor;
+}
+
+addValor(); // aqui estou chamando a função e quando chamo, ela atribui a var valor o numero 25 e retorna a mensagem.
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 // Invoque a função criada acima.
 addValorVar();
 
@@ -46,6 +57,7 @@ Crie uma função com as seguintes características:
 
 function verificaParams(x, y, z) {
   if (x === undefined || y === undefined || z === undefined) {
+    // quando não é passado nenhum valor para um var, ela é undefined. correto! > null é um valor 
     return "Preencha todos os valores corretamente!";
   }
 
